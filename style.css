@@ -19,6 +19,7 @@
   background-color: #fff;
   max-width: 80%;
   border-radius: 20px;
+  overflow: hidden;
 }
 .todo-app-heading {
   display: flex;
@@ -106,4 +107,46 @@ ul li span {
 }
 ul li span:hover {
   background: rgb(221, 222, 224);
+}
+
+/* media query */
+
+@media screen and (max-width: 600px) {
+  .todo-app-heading {
+    font-size: 24px;
+  }
+  .todo-app-image {
+    width: 30px;
+  }
+
+  .user-input {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .add-btn {
+    padding: 7px 32px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .user-input {
+    padding: 4px 20px;
+    border-radius: 30px;
+    background: rgb(223, 226, 230);
+    margin-bottom: 10px;
+  }
+  .add-btn {
+    padding: 5px 26px;
+  }
+
+  .input-div {
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+  }
+
+  .todo-app-heading {
+    display: flex;
+    justify-content: center;
+  }
 }
