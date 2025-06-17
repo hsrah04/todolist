@@ -19,7 +19,7 @@ addBtn.addEventListener("click", () => {
 
   //remove text from input box
   inputBox.value = "";
-  saveDate();
+  saveData();
 });
 
 //adding toggling in list item
