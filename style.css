@@ -9,7 +9,7 @@
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background: linear-gradient(130deg, #153677, #4e085f);
+  background: linear-gradient(90deg, #fc466b, #3f5efb);
   padding: 10px;
 }
 
@@ -27,6 +27,7 @@
   font-size: 28px;
   margin-bottom: 20px;
   color: #002765;
+  user-select: none;
 }
 .todo-app-image {
   width: 32px;
@@ -61,6 +62,7 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 40px;
+  user-select: none;
 }
 
 ul li {
@@ -95,7 +97,7 @@ ul li.checked::before {
 ul li span {
   position: absolute;
   right: 1px;
-  top: 2px;
+  top: 4px;
   width: 36px;
   height: 36px;
   font-size: 20px;

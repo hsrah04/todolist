@@ -1,21 +1,28 @@
 const inputBox = document.querySelector("#input-box");
 const listContainer = document.querySelector(".list-container");
+const addBtn = document.getElementById("add-btn");
 
-function addTask() {
+// adding list items into list
+
+addBtn.addEventListener("click", () => {
   if (inputBox.value === "") {
-    alert("You must write something first!");
+    window.alert("You must write something first");
   } else {
     let li = document.createElement("li");
     li.innerHTML = inputBox.value;
     listContainer.appendChild(li);
-    //adding delete icon
+    //creating delete button/icon
     let span = document.createElement("span");
     span.innerHTML = "\u00d7";
     li.appendChild(span);
   }
+
+  //remove text from input box
   inputBox.value = "";
-  saveData();
-}
+  saveDate();
+});
+
+//adding toggling in list item
 
 listContainer.addEventListener(
   "click",
@@ -31,11 +38,11 @@ listContainer.addEventListener(
   false
 );
 
-// trigger add on Enter
+// trigger add on Enter key
 inputBox.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
-    document.getElementById("add-btn").click();
+    addBtn.click();
   }
 });
 
